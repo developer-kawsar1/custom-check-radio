@@ -1,0 +1,80 @@
+html {
+  box-sizing: border-box;
+  background: #f2f2f2;
+  padding: 20px 50px
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+form {
+  margin: 1rem auto;
+  max-width: 750px;
+}
+
+
+.wrapper {
+  position: relative;
+  margin-bottom: .5rem;
+  margin-top: .5rem;
+
+}
+
+
+.wrapper label {
+  display: block;
+  padding: 5px 0 12px 48px;
+  display: flex;
+  align-items: center;
+}
+
+.wrapper input {
+  height: 30px;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 30px;
+}
+
+/*position new box*/
+.wrapper input+label::before {
+  border: 2px solid red;
+  content: "";
+  height: 30px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 30px;
+  transition: background .3s ease-in-out;
+
+}
+
+/*create check symbol with pseudo element*/
+.wrapper input+label::after {
+  content: "";
+  border: 3px solid #fff;
+  border-left: 0;
+  border-top: 0;
+  height: 15px;
+  left: 8px;
+  opacity: 0;
+  position: absolute;
+  top: 5px;
+  transform: rotate(45deg);
+  transition: opacity 0.2s ease-in-out;
+  width: 9px;
+}
+
+.wrapper input:checked+label::before {
+  background: red;
+}
+
+
+.wrapper input:checked+label::after {
+  opacity: 1;
+}
