@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    .header {
+      background: linen;
+    }
+
+    .header.header-content {}
+
+    .header .header-top {}
+
+    .header .header-bottom {}
+
+    .nav-menu {
+      display: flex;
+      background: ;
+      align-items: center;
+      height: 100%;
+      justify-content: flex-end;
+
+
+    }
+
+    .nav-menu .nav-menu-item {
+      list-style: none;
+      position: relative;
+
+    }
+
+    .nav-menu .nav-menu-item .nav-menu-link {
+      text-decoration: none;
+      color: crimson;
+
+      display: inline-block;
+      padding: 15px 20px;
+      transition: .3s;
+
+    }
+
+    .nav-menu .nav-menu-item .nav-menu-link:hover {
+      background-color: #ddd;
+    }
+
+    .logo-container {
+      height: 100%;
+      display: flex;
+      align-items: center;
+
+    }
+
+    .sub-menu {
+      background-color: red;
+      position: absolute;
+      top: 115%;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      left: 0;
+      width: 100%;
+      opacity: 0;
+      visibility: hidden;
+      transform: scaleY(0);
+      transition: all .3s ease-out;
+      transform-origin: top center;
+
+    }
+
+    .sub-menu .sub-menu-item {}
+
+    .sub-menu .sub-menu-item a {
+      text-decoration: none;
+      display: block;
+      background: yellow;
+      border-bottom: 1px solid #ddd;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .nav-menu .nav-menu-item:hover .sub-menu {
+      visibility: visible;
+      opacity: 1;
+      transform: scaleY(1);
+
+
+    }
+   .desktoplist{
+     background: dodgerblue;
+     padding: 0;
+     margin: 0;
+     display: flex;
+     align-items: center;
+     
+     
+   }
+  .desktoplist .desktoplist-item{
+    list-style-type:none;
+    position: relative;
+    
+  }
+ .desktoplist .desktoplist-item .desktoplist-link{
+  color: #000;
+  background: tan;
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition:all .6s ;
+  
+ }
+.sub-dropdown{
+  background: teal;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  
+ /* opacity: 0;
+  visibility: hidden;
+  transform: scaleY(0);
+  */
+}
+.sub-dropdown ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+ 
+}
+.sub-dropdown ul li{
+  
+}
+.sub-dropdown ul li a{
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  text-align: center;
+  background: #000;
+  border-bottom: 1px solid yellow;
+  padding: 10px;
+  
+}
+.sub-dropdown ul li a:hover{
+ background: yellow;
+ color: #000;
+}
+  .desktoplist .desktoplist-item .desktoplist-link:hover  {
+   background: #000;
+   color: #fff;
+ }
+.desktoplist .desktoplist-item .desktoplist-link:hover .sublist {
+  background: #000;
+  color: #fff;
+  display: none;
+}
+  </style>
+</head>
+<body>
+
+  <!-- header start -->
+  <header class="header">
+    <div class="header-content">
+      <div class="header-top">
+
+      </div>
+      <div class="header-bottom">
+        <!-- nav menu desktop  -->
+        <div class="container-fluid">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <div class="logo-container">
+                <h3>logo</h3>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <ul class="nav-menu">
+                <li class="nav-menu-item"><a class="nav-menu-link" href="#">nav item 1</a></li>
+                <li class="nav-menu-item"><a class="nav-menu-link" href="#">nav item 2</a>
+                  <ul class="sub-menu">
+                    <li class="sub-menu-item"><a href="#">sub item 1</a></li>
+                    <li class="sub-menu-item"><a href="#">sub item 2</a></li>
+                    <li class="sub-menu-item"><a href="#">sub item 3</a></li>
+                  </ul>
+                </li>
+                <li class="nav-menu-item"><a class="nav-menu-link" href="#">nav item 3</a></li>
+                <li class="nav-menu-item"><a class="nav-menu-link" href="#">nav item 4</a>
+                  <ul class="sub-menu">
+                    <li class="sub-menu-item"><a href="#">sub item 1</a></li>
+                    <li class="sub-menu-item"><a href="#">sub item 2</a></li>
+                    <li class="sub-menu-item"><a href="#">sub item 3</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- nav menu mobile -->
+    <!-- nav memu desktop -->
+  </header>
+  <!-- header end -->
+  
+  <!-- menu 2 -->
+  <nav>
+    <ul class="desktoplist">
+      <li class="desktoplist-item"><a href="#" class="desktoplist-link">Home</a></li>
+      <li class="desktoplist-item"><a href="#" class="desktoplist-link">About</a>
+       <div class="sub-dropdown">
+         <ul class="sublist">
+           <li class="sublist-item"><a href="#" class="sublist-link">Item</a></li>
+           <li class="sublist-item"><a href="#" class="sublist-link">Item</a></li>
+           <li class="sublist-item"><a href="#" class="sublist-link">Item</a></li>
+           <li class="sublist-item"><a href="#" class="sublist-link">Item</a></li>
+         </ul>
+       </div>
+      </li>
+      <li class="desktoplist-item"><a href="#" class="desktoplist-link">Contact</a></li>
+      <li class="desktoplist-item"><a href="#" class="desktoplist-link">Services</a></li>
+    </ul>
+  </nav>
+
+
+    <section id="seivice" class="text-center">
+      <div class="container">
+        <div class="service-header">
+          <h3 class="service-title">Our Services</h3>
+        </div>
+        <div class="service-body">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="content">
+                <h2>html</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam voluptas sit dolor tenetur iure maiores voluptates vero hic dolores. Numquam voluptatem alias nam at cumque voluptas nisi facere deleniti officiis.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="content">
+                <h2>html</h2>
+                <p>Itaque odio tenetur, non voluptates odit suscipit esse dolores fuga eos vitae sequi maiores dolorum impedit. Repudiandae repellendus atque, nemo obcaecati cupiditate, et, vitae tenetur dicta earum quas recusandae consequatur!</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="content">
+                <h2>html</h2>
+                <p>Ducimus architecto, distinctio nam veritatis animi eos quasi doloremque temporibus quam quae beatae nisi, magnam eius, ex quod! Ipsa quasi, nesciunt tempora reiciendis aperiam deserunt nulla ea, accusantium dolore distinctio!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+</body>
+
+</html>
